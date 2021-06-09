@@ -1,5 +1,5 @@
 {% set name = "QScreenCast" %}
-{% set version = "0.1.34" %}
+{% set version = "0.1.35" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/QScreenCast-{{ version }}.tar.gz
-  sha256: e5cc0dbeda86e8150a64458a1ba84f315e2e7eddf56c4a8bc3860cd0d747bae2
+  sha256: bc8c27489acb3aee525e96f690e8dc27e52e6ddb1473e051627bf0947e9f4b1a
 
 build:
   number: 0
