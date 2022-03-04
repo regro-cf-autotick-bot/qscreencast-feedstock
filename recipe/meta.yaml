@@ -24,7 +24,7 @@ requirements:
 #    - qtawesome>=1.1.1
   run:
     - ffmpeg
-    - pyqt >=5.15.4
+    - semi-ate::pyqt >=5.15.4
     - python 
     - qtawesome >=1.1.1
     - qtpy >=2.0.1
