@@ -9,6 +9,9 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/QScreenCast-{{ version }}.tar.gz
   sha256: 01a2094fed6ff44bfaaf8b82e0cc7abc00e81461601f593831b19213936086c2
+  patches:
+    # It seems that pyqt doesn't provide the right info for pip check to pass
+    - do_not_require_qtpy.patch
 
 build:
   number: 1
