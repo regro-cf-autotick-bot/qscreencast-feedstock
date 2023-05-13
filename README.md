@@ -1,11 +1,11 @@
-About qscreencast
-=================
+About qscreencast-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/qscreencast-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/Semi-ATE/QScreenCast
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/qscreencast-feedstock/blob/main/LICENSE.txt)
 
 Summary: A no-nonsense screen-caster behind a QToolButton.
 
