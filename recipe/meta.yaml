@@ -9,13 +9,13 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/QScreenCast-{{ version }}.tar.gz
   sha256: a00847072b1a77a903d13d1572100fa3ac91d5665bac87d93df363a7b038cd6d
-  patches:
-    # It seems that pyqt doesn't provide the right info for pip check to pass
-    - do_not_require_qtpy.patch
 
 build:
   number: 1
-  script: {{ PYTHON }} -m pip install . -vv
+  script:
+    # It seems that pyqt doesn't provide the right info for pip check to pass
+    - sed '/^pyqt/d' requirements/conda_run.txt
+    - {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
