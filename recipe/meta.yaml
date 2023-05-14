@@ -1,5 +1,5 @@
 {% set name = "QScreenCast" %}
-{% set version = "0.1.39" %}
+{% set version = "0.1.41" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/QScreenCast-{{ version }}.tar.gz
-  sha256: 01a2094fed6ff44bfaaf8b82e0cc7abc00e81461601f593831b19213936086c2
+  sha256: a00847072b1a77a903d13d1572100fa3ac91d5665bac87d93df363a7b038cd6d
   patches:
     # It seems that pyqt doesn't provide the right info for pip check to pass
     - do_not_require_qtpy.patch
