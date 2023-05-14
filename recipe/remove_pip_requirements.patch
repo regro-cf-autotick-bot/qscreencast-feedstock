@@ -1,0 +1,16 @@
+diff --git a/setup.py b/setup.py
+index 5ace11d..5bf4b40 100644
+--- a/setup.py
++++ b/setup.py
+@@ -16,11 +16,6 @@ with open(os.path.join(here, "README.md"), "r", encoding="utf-8") as f:
+ 
+ 
+ install_requires = []
+-with open(os.path.join(here, "requirements", "conda_run.txt")) as f:
+-    for line in f:
+-        line = line.strip()
+-        if line != "":
+-            install_requires.append(line)
+ 
+ setup(
+     name="QScreenCast",
