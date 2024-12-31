@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/QScreenCast-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/QScreenCast-{{ version }}.tar.gz
   sha256: a00847072b1a77a903d13d1572100fa3ac91d5665bac87d93df363a7b038cd6d
   patches:
     # It seems that pyqt doesn't provide the right info for pip check to pass
@@ -20,21 +20,21 @@ source:
     # - sed '/^pyqt/d' requirements/conda_run.txt
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
     - pyqt >=5.15.4
     - qtpy >=2.0.1
     - qtawesome >=1.1.1
   run:
     - ffmpeg
     - pyqt >=5.15.4
-    - python >=3.7
+    - python >={{ python_min }}
     - qtawesome >=1.1.1
     - qtpy >=2.0.1
 
@@ -45,6 +45,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/Semi-ATE/QScreenCast
